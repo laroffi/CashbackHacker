@@ -4,11 +4,11 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
     CashbackHackService service = new CashbackHackService();
 
     @Test
-    void shouldShowIfUnder1000() {
+    public void shouldShowIfUnder1000() {
         int amount = 890;
 
         int actual = service.remain(amount);
@@ -18,7 +18,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldShowIfOver1000() {
+    public void shouldShowIfOver1000() {
         int amount = 1733;
 
         int actual = service.remain(amount);
@@ -28,7 +28,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldShowIfEqual1000() {
+    public void shouldShowIfEqual1000() {
         int amount = 1000;
 
         int actual = service.remain(amount);
